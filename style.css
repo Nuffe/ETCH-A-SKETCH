@@ -1,0 +1,19 @@
+
+
+.div1{
+    margin: 100px 0 0 43%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    height: 240px;
+    border: 1px solid;
+}
+    .divBox {
+        width: 15px;
+        height: 15px;
+        background-color: green;
+}
+
+.divBox:hover{
+    background-color: black;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="div1" class="div1">
+
+    </div>
+</body>
+
+
+<script>
+window.onload = function creatDiv(){
+    for (i = 0; i < 256; i++){
+        var newDiv = document.createElement("div");
+        newDiv.classList.add("divBox");
+        var mainDiv = document.querySelector("#div1");
+
+        mainDiv.appendChild(newDiv);
+    }
+}
+
+</script>
