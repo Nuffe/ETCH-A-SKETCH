@@ -4,16 +4,13 @@
     margin: 100px 0 0 43%;
     display: flex;
     flex-wrap: wrap;
-    width: 240px;
-    height: 240px;
-    border: 1px solid;
+    width: 272px;
+    height: 271px;
+    border: 1px solid red;
 }
     .divBox {
         width: 15px;
         height: 15px;
-        background-color: green;
+        border: 1px solid black;
 }
 
-.divBox:hover{
-    background-color: black;
-}

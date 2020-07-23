@@ -5,21 +5,48 @@
 </head>
 
 <body>
-    <div id="div1" class="div1">
-
-    </div>
+    <div id="div1" class="div1"> </div>
+    <button id="grid" class="grid ">Change grid size </button>
 </body>
 
 
 <script>
-window.onload = function creatDiv(){
+function creatDiv(){ 
     for (i = 0; i < 256; i++){
         var newDiv = document.createElement("div");
         newDiv.classList.add("divBox");
         var mainDiv = document.querySelector("#div1");
-
         mainDiv.appendChild(newDiv);
+        newDiv.addEventListener("mouseover", color)
+      
     }
 }
+window.addEventListener("load", creatDiv)
+
+function color(e) {
+this.style.background = "black"    
+console.log(e)
+}
+
+var button = document.querySelector(".grid")
+button.addEventListener("click", newGrid)
+
+function newGrid(){
+var gridSize = prompt("Grid size");
+var divs = document.querySelectorAll(".divBox").forEach(e => e.parentNode.removeChild(e)); 
+newGrid2(gridSize)  //undersök hur denna koden funkar... så du fattar
+} 
+
+function newGrid2(gridSize){
+    for (i = 0; i < (gridSize*gridSize); i++){
+        var newDiv = document.createElement("div");
+        newDiv.classList.add("divBox");
+        var mainDiv = document.querySelector("#div1");
+        mainDiv.appendChild(newDiv);
+        newDiv.addEventListener("mouseover", color)
+      
+    }
+}
+
 
 </script>
