@@ -12,29 +12,29 @@
 
 <script>
 function creatDiv(){ 
-    for (i = 0; i < 256; i++){
-        var newDiv = document.createElement("div");
+    for (let i = 0; i < 256; i++){
+        let newDiv = document.createElement("div");
         newDiv.classList.add("divBox");
-        var mainDiv = document.querySelector("#div1");
+        let mainDiv = document.querySelector("#div1");
         mainDiv.appendChild(newDiv);
         newDiv.addEventListener("mouseover", color)
-      
+        newDiv.style.height = ((600-(16*2))/16) + ("px");
+        newDiv.style.width = ((600-(16*2))/16) + ("px");
     }
 }
 window.addEventListener("load", creatDiv)
 
 function color(e) {
 this.style.background = "black"    
-console.log(e)
 }
 
-var button = document.querySelector(".grid")
+let button = document.querySelector(".grid")
 button.addEventListener("click", newGrid)
 
 function newGrid(){
-var gridSize = prompt("Grid size");
-var divs = document.querySelectorAll(".divBox").forEach(e => e.parentNode.removeChild(e)); 
-newGrid2(gridSize)  //undersök hur denna koden funkar... så du fattar
+let gridSize = prompt("Grid size");
+let divs = document.querySelectorAll(".divBox").forEach(e => e.parentNode.removeChild(e)); 
+newGrid2(gridSize)  
 } 
 
 function newGrid2(gridSize){
@@ -44,7 +44,9 @@ function newGrid2(gridSize){
         var mainDiv = document.querySelector("#div1");
         mainDiv.appendChild(newDiv);
         newDiv.addEventListener("mouseover", color)
-      
+        newDiv.style.height = ((600-(gridSize*2))/gridSize) + ("px");
+        newDiv.style.width = ((600-(gridSize*2))/gridSize) + ("px");
+        console.log(((600-(gridSize*2))/gridSize))
     }
 }
 

@@ -1,16 +1,18 @@
 
 
 .div1{
+   
     margin: 100px 0 0 43%;
     display: flex;
     flex-wrap: wrap;
-    width: 272px;
-    height: 271px;
-    border: 1px solid red;
+    width: 600px;
+    height: 600px;
+    border: 10px solid lightcoral;
+    border-radius: 7px;
 }
     .divBox {
-        width: 15px;
-        height: 15px;
         border: 1px solid black;
+      align-items:stretch;
+      
 }
 
