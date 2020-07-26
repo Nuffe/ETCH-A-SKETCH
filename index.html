@@ -9,12 +9,20 @@
     <div class="controll right"></div>
     <div class="controll left"></div>
     <div id="div1" class="div1"> </div>
-    <button id="grid" class="grid ">Change grid size </button>
-    </div> 
+<div class="bcontainer"> 
+   
+    <button id="gray" class="gray button">gray-scale</button>
+    <button id="rainbow" class="rainbow button">Random color</button>
+    <button id="grid" class="grid button ">Change grid size </button>
+</div>
+</div> 
 </body>
 
 
 <script>
+let black = "check" 
+let ranbow;
+let gray;   
 function creatDiv(){ 
     for (let i = 0; i < 256; i++){
         let newDiv = document.createElement("div");
@@ -29,11 +37,21 @@ function creatDiv(){
 window.addEventListener("load", creatDiv)
 
 function color(e) {
-this.style.background = "black"    
+if( black == "check") { 
+this.style.background = "black" 
+console.log(1.2)   
+}
+else if(rainbow == "check"){ 
+var randomColor = Math.floor(Math.random()*16777215).toString(16);
+this.style.backgroundColor = "#" + randomColor;
+console.log(2 )}
+else if(gray == "check"){
+// somthing with lightness hsl(0, 0%, 100%)
+}
 }
 
-let button = document.querySelector(".grid")
-button.addEventListener("click", newGrid)
+let grid = document.querySelector(".grid")
+grid.addEventListener("click", newGrid)
 
 function newGrid(){
 let gridSize = prompt("Grid size");
@@ -54,5 +72,22 @@ function newGrid2(gridSize){
     }
 }
 
+let rainbow = document.querySelector(".rainbow")
+rainbow.addEventListener("click", randomColor)
+
+function randomColor(){
+black = "";
+rainbow = "check";
+gray;   
+}
+
+let graying = document.querySelector(".gray")
+graying.addEventListener("click", grayScale)
+
+function grayScale(){
+black = "";
+rainbow = "";
+gray = "check"   
+}
 
 </script>
