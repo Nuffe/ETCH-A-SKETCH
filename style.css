@@ -1,12 +1,22 @@
 
 .container{
-    margin: 11px 20% 0 26%;
     background-color: #e61d1d;
-    height: 800px;
-    width: 1200px;
     border-radius: 76px;
     box-shadow: 0px 9px 12px 6px rgba(179,173,179,1);
+    height: 800px;
+    width: 1200px;
+    width: 100%;
+    max-width: 1166px;
+    max-height: 790px;
+    min-width: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: auto;
+    bottom: auto;
 }
+
+
 .controll{
     background-color: white;
     width: 100px;
@@ -57,3 +67,17 @@
     width: 136px;
     height: 200px;
 }
+
+@media screen and (max-width: 950px){ 
+    .bcontainer {
+        bottom: 118px;
+    left: 186px;
+    width: 442px;
+    height: 20px;
+    }
+    .div1{
+        right: 87px;
+       
+    }
+    
+    }
