@@ -11,8 +11,8 @@ function creatDiv(){
         newDiv.addEventListener("mouseover", color)
         newDiv.style.backgroundColor = "white"
         newDiv.style.filter = "brightness(100%)";
-        newDiv.style.height = ((600-(16*2))/16) + ("px");
-        newDiv.style.width = ((600-(16*2))/16) + ("px");
+        newDiv.style.height = ((400-(16*2))/16) + ("px");
+        newDiv.style.width = ((550-(16*2))/16) + ("px");
     }
 }
 window.addEventListener("load", creatDiv)
@@ -67,9 +67,9 @@ function newGrid2(gridSize){
         newDiv.addEventListener("mouseover", color)
         newDiv.style.backgroundColor = "white"
         newDiv.style.filter = "brightness(100%)";
-        newDiv.style.height = ((600-(gridSize*2))/gridSize) + ("px");
-        newDiv.style.width = ((600-(gridSize*2))/gridSize) + ("px");
-        console.log(((600-(gridSize*2))/gridSize))
+        newDiv.style.height = ((400-(gridSize*2))/gridSize) + ("px");
+        newDiv.style.width = ((550-(gridSize*2))/gridSize) + ("px");
+        console.log(((550-(gridSize*2))/gridSize))
     }
 }
 
