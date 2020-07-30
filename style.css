@@ -60,24 +60,33 @@ body{
 .button{
     margin: 10px;
     width: 120px;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
 }
 .bcontainer{
    position: relative;
-    bottom: 400px;
-    padding: 0px;
-    width: 136px;
+   bottom: 400px;
+   padding: 0px;
+   width: 136px;
 }
 
-@media screen and (max-width: 950px){ 
-    .bcontainer {
-        bottom: 118px;
+@media screen and (max-width: 1400px){
+body{ 
+    background-image: url(img/wide.png);
+    }
+      
+.container{
+    margin-bottom: 53px;
+}
+.bcontainer {
+    bottom: 165px;
     left: 186px;
     width: 442px;
     height: 20px;
-    }
-    .div1{
-        right: 87px;
-       
-    }
-    
-    }
+   }
+.div1{
+    right: 87px;
+}
+   
+   }
